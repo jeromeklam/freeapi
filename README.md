@@ -24,7 +24,7 @@ La limite des appels est documentée ici : https://api.gouv.fr/guides/quelle-api
     $api_cfg = [
         'key'    => '<customer key>',
         'secret' => '<customer secret>',
-        'path'   => '<token store path/' 
+        'path'   => '<token store path>' 
     ];
     $api     = \FreeAPI\INSEE\Sirene\Siret::getInstance($api_cfg);
     $result  = $api->find(['nom' => '*zoo*', 'ville' => 'amneville']);
