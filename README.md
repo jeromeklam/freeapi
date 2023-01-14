@@ -1,6 +1,6 @@
 # freeapi
 
-## APi Sirene V3
+## API Sirene V3
 
 Intégration rapide de l'API Sirene. Pour l'utiliser il faut avoir une application enregistrée.
 https://api.insee.fr/catalogue/
