@@ -1,0 +1,9 @@
+# 1.0.0 : Première version
+
+* API SIRENE
+  * Siret
+    * Recherche sur numéro de siret
+    * Recherche sur critères
+  * Siren
+    * Recherche sur numéro de siren
+    * Recherche sur critères
