@@ -1,0 +1,38 @@
+{
+    "name"        : "jeromeklam/freeapi",
+    "type"        : "library",
+    "description" : "Free PHP API",
+    "keywords"    : ["FREE", "API", "PHP", "INSEE"],
+    "homepage"    : "http://github.com/jeromeklam",
+    "license"     : "MIT",
+    "authors" : [
+        {
+            "name"  : "KLAM Jérôme",
+            "email" : "jeromeklam@free.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require" : {
+        "php"                                  : ">=7.0",
+        "robmorgan/phinx"                      : "*",
+        "phing/phing"                          : "*",
+        "psr/log"                              : "*"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "FreeAPI\\" : "src/FreeAPI/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit"           : "^6.4",
+        "phing/phing"               : "*",
+        "phpmd/phpmd"               : "*",
+        "squizlabs/php_codesniffer" : "*",
+        "sebastian/phpcpd"          : "*",
+        "phploc/phploc"             : "*",
+        "pdepend/pdepend"           : "*",
+        "theseer/phpdox"            : "*",
+        "symfony/browser-kit"       : "*",
+        "symfony/css-selector"      : "*"
+    }
+}
