@@ -1,6 +1,6 @@
 # freeapi
 
-## APi Sirene V3
+## API Sirene V3
 
 Intégration rapide de l'API Sirene. Pour l'utiliser il faut avoir une application enregistrée.
 https://api.insee.fr/catalogue/
@@ -24,7 +24,7 @@ La limite des appels est documentée ici : https://api.gouv.fr/guides/quelle-api
     $api_cfg = [
         'key'    => '<customer key>',
         'secret' => '<customer secret>',
-        'path'   => '<token store path/' 
+        'path'   => '<token store path>' 
     ];
     $api     = \FreeAPI\INSEE\Sirene\Siret::getInstance($api_cfg);
     $result  = $api->find(['nom' => '*zoo*', 'ville' => 'amneville']);
