@@ -55,6 +55,8 @@ class Etablissement extends Base
     
     public $libellePaysEtrangerEtablissement = null;
 
+    public $categorie = null;
+
     /**
      * Constructor
      * 
@@ -80,6 +82,9 @@ class Etablissement extends Base
                     }
                 }
             }
+        }
+        if (isset(\FreeAPI\INSEE\Constants::$categories[$this->categorieJuridiqueUniteLegale])) {
+            $this->categorie = \FreeAPI\INSEE\Constants::$categories[$this->categorieJuridiqueUniteLegale];
         }
     }
 }

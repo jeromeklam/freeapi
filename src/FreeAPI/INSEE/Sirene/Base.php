@@ -1,4 +1,5 @@
 <?php
+
 namespace FreeAPI\INSEE\Sirene;
 
 /**
@@ -19,5 +20,15 @@ class Base
                 $this->{$name} = $value;
             }
         }
+    }
+
+    /**
+     * Convert to array
+     * 
+     * @return array
+     */
+    public function __toArray()
+    {
+        return get_object_vars($this);
     }
 }

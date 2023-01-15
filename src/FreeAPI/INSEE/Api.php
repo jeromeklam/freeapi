@@ -198,7 +198,7 @@ class Api
      */
     protected function encodeParam($p_param)
     {
-        $val   = $p_param;
+        $val   = strtoupper(\FreeAPI\Tools::withoutAccent($p_param));
         $first = false;
         $last  = false;
         if ($val[0] == '*') {
@@ -207,15 +207,18 @@ class Api
         if ($val[strlen($val)-1] == '*') {
             $last = true;
         }
+        $wild = true;
+        $val  = str_replace('*', '', $val);
         if (strpos($val, ' ') !== false) {
-            $val = '"' . $val . '"';
+            $val  = '%22' . $val . '%22';
+            $wild = false;
         }
-        $val = str_replace('*', '', $val);
-        $val = urlencode($val);
-        if ($first) {
+        $val = str_replace(' ', '%20', $val);
+        //$val = urlencode($val);
+        if ($wild && $first) {
             $val = '*' . $val;
         }
-        if ($last) {
+        if ($wild && $last) {
             $val = $val . '*';
         }
         return $val;

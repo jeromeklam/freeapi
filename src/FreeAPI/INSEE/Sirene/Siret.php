@@ -88,7 +88,7 @@ class Siret extends \FreeAPI\INSEE\Api
                     if ($params['q'] != '') {
                         $params['q'] .= '%20AND%20';
                     }
-                    $params['q'] .= $val;
+                    $params['q'] .= '(' . $val . ')';
                 }
             }
             $result = $this->getSiret($params);
